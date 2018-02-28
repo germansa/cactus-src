@@ -6,8 +6,6 @@ import (
     "net/http"
 
     "github.com/gorilla/mux"
-
-    . "./model"
 )
 
 type Client struct {
@@ -173,7 +171,7 @@ func UpdateClient(w http.ResponseWriter, r *http.Request) {
 
     res, err := db.Exec(sqlStatement, newClient.Name, newClient.LastName, newClient.Phone, newClient.Email, id)
     defer db.Close()
-    
+
     if err != nil {
         panic(err)
     }

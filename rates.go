@@ -6,8 +6,6 @@ import (
     "net/http"
 
     "github.com/gorilla/mux"
-
-    . "./model"
 )
 
 type Rates struct {
@@ -177,7 +175,7 @@ func UpdateRates(w http.ResponseWriter, r *http.Request) {
 
     res, err := db.Exec(sqlStatement, newRate.Name, newRate.Quantity, newRate.Unit_price, newRate.RateTypeID, newRate.ReservationID, id)
     defer db.Close()
-    
+
     if err != nil {
         panic(err)
     }

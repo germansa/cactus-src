@@ -8,7 +8,6 @@ import (
     "time"
     "github.com/gorilla/mux"
     _ "github.com/lib/pq"
-    . "./model"
     "strings"
     "golang.org/x/crypto/bcrypt"
     "fmt"

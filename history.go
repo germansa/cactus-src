@@ -6,8 +6,6 @@ import (
     "net/http"
 
     "github.com/gorilla/mux"
-
-    . "./model"
 )
 
 type History struct {
